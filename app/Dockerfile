@@ -6,7 +6,6 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
-COPY ["employee_data_advanced.json", "app/employee_data_advanced.json"]
 
 EXPOSE 8000
 

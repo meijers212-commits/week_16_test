@@ -28,8 +28,8 @@ def insert_data():
     with open(file_path) as file:
         file_data = json.load(file)
 
-        ins_result = Collection.insert_many(file_data)
-        return f"Data inserted to MongoDB. Documents inserted: {len(ins_result.inserted_ids)}"
+    ins_result = Collection.insert_many(file_data)
+    return f"Data inserted to MongoDB. Documents inserted: {len(ins_result.inserted_ids)}"
 
 
 def get_collection():
