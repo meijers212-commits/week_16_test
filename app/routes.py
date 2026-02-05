@@ -1,8 +1,13 @@
 from fastapi import APIRouter
 from dal import dal
-
+from connection import insert_data
 
 router = APIRouter()
+
+# q0
+@router.get('/insert_data')
+def insert_data():
+    return insert_data()
 
 # q1
 @router.get('/employees/by-age-and-role')
