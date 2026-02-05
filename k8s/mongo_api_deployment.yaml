@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: elazarmeijers/mongo_app:v2
+        image: elazarmeijers/mongo_app:v1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

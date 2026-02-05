@@ -23,8 +23,7 @@ with open(file_path) as file:
     file_data = json.load(file)
 
 # Inserting the loaded data in the Collection
-def insert_data():
-
+def trigger_insert():
     with open(file_path) as file:
         file_data = json.load(file)
 
