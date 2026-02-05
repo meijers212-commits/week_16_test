@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deploy
+  labels:
+    app: api-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-deploy
+  template:
+    metadata:
+      labels:
+        app: api-deploy
+    spec:
+      containers:
+      - name: api
+        image: elazarmeijers/mongo_app:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        env:
+        - name: "MONGO_URI"
+          value: "mongodb://mongo:27017"
+        - name: MONGO_DB
+          value: "testdb"
+        - name: MONGO_COLLECTION
+          value: "testcollection"
